@@ -1,0 +1,23 @@
+{
+  "name": "projectc8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Error6251/projectC8.git"
+  },
+  "author": "Juhair Islam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Error6251/projectC8/issues"
+  },
+  "homepage": "https://github.com/Error6251/projectC8#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.0.4"
+  }
+}
