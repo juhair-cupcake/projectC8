@@ -1,4 +1,14 @@
-const socket = io.connect("http://192.168.0.105:4000");
+const serverName = "http://192.168.0.105:4000";
+const socket = io.connect(serverName);
+
+//collect the User name
+let userName = sessionStorage.getItem("name");
+if (userName == null) {
+  console.log("empty");
+  window.location.href = `/username`;
+} else {
+  socket.emit("newUser", userName);
+}
 
 //Collect the DOM
 const input = document.getElementById("input");
@@ -8,9 +18,11 @@ const btn = document.getElementById("send");
 
 //Send the msg to other
 btn.addEventListener("click", () => {
-  socket.emit("chat", {
-    message: input.value,
-  });
+  if (input.value != "") {
+    socket.emit("chat", {
+      message: input.value,
+    });
+  }
   input.value = "";
 });
 //Same thing just with enter without clicking
@@ -23,13 +35,11 @@ input.addEventListener("keyup", (evt) => {
 //send the key stroke
 const checkTyping = () => {
   if (input.value != "") {
-    socket.emit("typing", {
-      name: "Some one",
-    });
+    socket.emit("typing", userName);
   }
 };
 //Make this infinate
-setInterval(checkTyping, 1000);
+setInterval(checkTyping, 500);
 
 //Listen to the socket call And print it
 //Print the chat
@@ -40,7 +50,16 @@ socket.on("chat", (data) => {
   input.scrollIntoView();
 });
 
-//Print if someone is typing
+//Print if someone is connected
+socket.on("newHere", (data) => {
+  output.innerHTML += `<p>${data} joined the chat</p>`;
+});
+//Print if someone is Disconnected
+socket.on("oldGone", (data) => {
+  output.innerHTML += `<p>${data} is gone from chat :(</p>`;
+});
+
+//Print typing
 socket.on("typing", (data) => {
-  typing.innerHTML = `<p> ${data.name} is typing...</p>`;
+  typing.innerHTML = `<p> ${data} is typing...</p>`;
 });
