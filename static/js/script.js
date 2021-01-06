@@ -1,4 +1,4 @@
-const serverName = "http://192.168.0.105:4000";
+const serverName = "http://localhost:4000";
 const socket = io.connect(serverName);
 
 //collect the User name
