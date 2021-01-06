@@ -1,4 +1,116 @@
 * {
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+}
+body {
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  padding: 10px;
+}
+
+.name-in {
+  text-align: center;
+  margin: auto;
+  width: 80vw;
+  padding: 50px;
+  background-color: black;
+  padding: 10px;
+  border: 5px blueviolet solid;
+  border-bottom: 1px blueviolet solid;
+  border-radius: 50px;
+}
+
+input {
+  width: 40vw;
+  border-radius: 20px;
+  border: none;
   margin: 10px;
   padding: 10px;
+  color: white;
+  border: 5px blueviolet solid;
+  border-bottom: 2px blueviolet solid;
+  border-radius: 50px;
+  background-color: black;
+}
+
+button {
+  border-radius: 20px;
+  color: white;
+  background-color: black;
+  margin: 10px;
+  padding: 10px;
+
+  border: 3px blueviolet solid;
+  border-bottom: none;
+  border-radius: 70px;
+}
+
+.input-msg {
+  text-align: center;
+  width: 80vw;
+  border: 5px blueviolet solid;
+  border-bottom: none;
+  border-radius: 70px;
+  position: fixed;
+  bottom: 0px;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.top {
+  position: fixed;
+  background-color: black;
+  border-bottom: 2px blueviolet solid;
+  border-radius: 70px;
+  width: calc(100vw - 30px);
+  top: 0px;
+  text-align: center;
+}
+
+.show {
+  margin: auto;
+  width: 80vw;
+  border: 3px blueviolet solid;
+  border-radius: 20px;
+  margin-top: 70px;
+  margin-bottom: 60px;
+  padding: 10px;
+}
+
+.msg {
+  margin: 5px;
+  width: 50%;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: black;
+  border: 3px solid blueviolet;
+  border-left: none;
+}
+
+.me {
+  margin: 5px;
+  margin-left: 35vw;
+  width: 50%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 3px solid rgb(147, 122, 172);
+  border-right: none;
+}
+
+.space {
+  margin: 30vh;
+}
+
+.comment {
+  text-align: center;
+  margin: auto;
+}
+
+.type {
+  color: rgba(255, 255, 255, 0.664);
+  margin-left: 20px;
 }

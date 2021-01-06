@@ -20,6 +20,7 @@ const btn = document.getElementById("send");
 btn.addEventListener("click", () => {
   if (input.value != "") {
     socket.emit("chat", {
+      name: userName,
       message: input.value,
     });
   }
@@ -44,22 +45,29 @@ setInterval(checkTyping, 500);
 //Listen to the socket call And print it
 //Print the chat
 socket.on("chat", (data) => {
-  output.innerHTML += `<p> ${data.message} </p>`;
-  typing.innerHTML = "";
+  if (data.name != userName) {
+    output.innerHTML += ` <p class="msg"><b><i>${data.name}: </i></b>${data.message} </p>`;
+    typing.innerHTML = "";
+  } else {
+    output.innerHTML += ` <p class="me">${data.message} </p>`;
+    typing.innerHTML = "";
+  }
   //Automatic go to the bottom when new message comes
-  input.scrollIntoView();
+  typing.scrollIntoView();
 });
 
 //Print if someone is connected
 socket.on("newHere", (data) => {
-  output.innerHTML += `<p>${data} joined the chat</p>`;
+  output.innerHTML += `<p class="comment">${data} joined the chat</p>`;
 });
 //Print if someone is Disconnected
 socket.on("oldGone", (data) => {
-  output.innerHTML += `<p>${data} is gone from chat :(</p>`;
+  if (data != null) {
+    output.innerHTML += `<p class="comment">${data} is gone from chat :(</p>`;
+  }
 });
 
 //Print typing
 socket.on("typing", (data) => {
-  typing.innerHTML = `<p> ${data} is typing...</p>`;
+  typing.innerHTML = `<p class="type"> ${data} is typing...</p>`;
 });
