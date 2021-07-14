@@ -7,7 +7,7 @@ const path = require("path");
 const app = express();
 const port = process.env.PORT || 4000;
 const server = app.listen(port, () => {
-  console.log(`We are online at http://{IP}:${port}`);
+  console.log(`We are online at http://localhost:${port}`);
 });
 
 //incert the static files

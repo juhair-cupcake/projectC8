@@ -6,103 +6,114 @@
 body {
   background-color: black;
   color: white;
+  text-shadow: 0px 0px 2px black, 0 0 10px white, 0 0 10px white;
+  font-size: large;
 }
 
 h1 {
   padding: 10px;
+  text-shadow: 0px 0px 1px black, 0 0 5px white, 0 0 10px white;
 }
 
-.name-in {
-  text-align: center;
-  margin: auto;
-  width: 80vw;
-  padding: 50px;
-  background-color: black;
-  padding: 10px;
-  border: 5px blueviolet solid;
-  border-bottom: 1px blueviolet solid;
-  border-radius: 50px;
-}
-
-input {
-  width: 40vw;
-  border-radius: 20px;
-  border: none;
+.btn {
   margin: 10px;
-  padding: 10px;
-  color: white;
-  border: 5px blueviolet solid;
-  border-bottom: 2px blueviolet solid;
-  border-radius: 50px;
-  background-color: black;
-}
-
-button {
-  border-radius: 20px;
+  padding: 15px 20px;
   color: white;
   background-color: black;
-  margin: 10px;
-  padding: 10px;
-
   border: 3px blueviolet solid;
   border-bottom: none;
   border-radius: 70px;
+  box-shadow: 0px 0px 15px blueviolet, inset 0px 0px 15px blueviolet;
+  text-shadow: 0px 0px 2px black, 0 0 3px white, 0 0 3px white;
+}
+.btn:hover {
+  box-shadow: 0px 0px 25px blueviolet, inset 0px 0px 25px blueviolet;
 }
 
-.input-msg {
-  text-align: center;
-  width: 80vw;
+.inp {
+  width: 60%;
+  margin: 10px;
+  padding: 15px;
+  font-size: medium;
+  color: white;
+  background-color: black;
   border: 5px blueviolet solid;
   border-bottom: none;
-  border-radius: 70px;
-  position: fixed;
-  bottom: 0px;
-  transform: translateX(-50%);
-  left: 50%;
+  border-radius: 50px;
+  box-shadow: 0px 0px 15px blueviolet, inset 0px 0px 15px blueviolet;
+}
+
+.inp:focus {
+  box-shadow: 0px 0px 25px blueviolet, inset 0px 0px 25px blueviolet;
+}
+
+.name-in {
+  margin: 10vh auto;
+  text-align: center;
+  max-width: 500px;
+  padding: 10px;
+  border: 5px blueviolet solid;
+  border-bottom: none;
+  border-radius: 50px;
+  box-shadow: 0px 0px 30px blueviolet, inset 0px 0px 30px blueviolet;
+}
+
+.name-in-title {
+  margin: 10px 0px;
+}
+
+.name-in-input {
+  margin-bottom: 40px;
+}
+
+.name-in-btn {
+  margin-bottom: 40px;
 }
 
 .top {
   position: fixed;
+  transform: translateX(-50%);
+  top: 0;
+  left: 50%;
+  width: calc(100vw - 30px);
+  padding: 10px;
+  font-size: xx-large;
+  text-align: center;
   background-color: black;
   border-bottom: 2px blueviolet solid;
   border-radius: 70px;
-  width: calc(100vw - 30px);
-  top: 0px;
-  text-align: center;
+  box-shadow: 0px 0px 30px blueviolet, inset 0px 0px 30px blueviolet;
 }
 
 .show {
-  margin: auto;
   width: 80vw;
+  margin: 120px auto 150px;
+  padding: 40px 20px;
+  font-size: large;
   border: 3px blueviolet solid;
-  border-radius: 20px;
-  margin-top: 70px;
-  margin-bottom: 60px;
-  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 30px blueviolet, inset 0px 0px 30px blueviolet;
 }
 
 .msg {
-  margin: 5px;
-  width: 50%;
-  padding: 10px;
-  border-radius: 20px;
-  background-color: black;
+  margin: 20px;
+  margin-right: 20%;
+  padding: 15px 20px;
+  border-radius: 30px;
   border: 3px solid blueviolet;
   border-left: none;
+  box-shadow: 0px 0px 15px blueviolet, inset 0px 0px 15px blueviolet;
 }
 
 .me {
-  margin: 5px;
-  margin-left: 35vw;
-  width: 50%;
-  padding: 10px;
-  border-radius: 20px;
+  margin: 20px;
+  margin-left: 20%;
+  padding: 15px 20px;
+  border-radius: 30px;
   border: 3px solid rgb(147, 122, 172);
   border-right: none;
-}
-
-.space {
-  margin: 30vh;
+  box-shadow: 0px 0px 15px rgb(147, 122, 172),
+    inset 0px 0px 15px rgb(147, 122, 172);
 }
 
 .comment {
@@ -112,5 +123,20 @@ button {
 
 .type {
   color: rgba(255, 255, 255, 0.664);
-  margin-left: 20px;
+  margin-left: 5%;
+}
+
+.input-msg {
+  position: fixed;
+  transform: translateX(-50%);
+  bottom: 0px;
+  left: 50%;
+  text-align: center;
+  width: 80vw;
+  padding: 10px;
+  background-color: black;
+  border: 5px blueviolet solid;
+  border-bottom: none;
+  border-radius: 70px;
+  box-shadow: 0px 0px 20px blueviolet, inset 0px 0px 20px blueviolet;
 }
