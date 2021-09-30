@@ -1,7 +1,7 @@
 {
   "name": "projectc8",
   "version": "1.0.0",
-  "description": "",
+  "description": "Noob Project",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/Error6251/projectC8.git"
   },
   "author": "Juhair Islam",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Error6251/projectC8/issues"
   },
